@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="bio">
+            <h1>Daniel Y.</h1>
+
+            <div class="pfp">
+                <img src="./img/burrito.png" alt="Picture of Daniel at Georgian College">
+            </div>
+
+            <!-- Basically lorem ipsum but real -->
+            <div class="skills">
+                <p>
+                    Hi there! My name is Daniel Y, and I'm a Computer Science college student with a passion for
+                    technology and programming.
+                    <br><br>
+                    Throughout my academic journey, I've developed strong skills in programming languages such as Java,
+                    Python, and C++. I also have experience with web development technologies such as HTML, CSS, and
+                    JavaScript. In addition to that, I'm proficient in database management and have worked with SQL and
+                    MySQL.
+                </p>
+            </div>
+
+            <div class="icons">
+                <a href="#javaAnchor"><img src="./img/svg/java.svg" alt="Java Anchor"></a>
+                <a href="#htmlAnchor"><img src="./img/svg/html.svg" alt="HTML Anchor"></a>
+                <a href="#cssAnchor"><img src="./img/svg/css.svg" alt="CSS Anchor"></a>
+            </div>
+        </div>
+
+        <!-- The projects lead to private github repos and are just there as proof that they can lead to real ones-->
+        <div class="projects">
+            <h2>My Projects</h2>
+            <div class="java project">
+                <div class="divider">
+                    <img src="./img/svg/java.svg" alt="Java Icon" id="javaAnchor">
+                    <div class="line javaLine"></div>
+                </div>
+                <div class="info">
+                    <h3>Library Project</h3>
+                    <a href="https://github.com/insertusernamed/javamainproject"><img src="./img/java.png"
+                            alt="Library Project" class="projectImage"></a>
+                </div>
+            </div>
+            <div class="html project">
+                <div class="divider">
+                    <img src="./img/svg/html.svg" alt="HTML Icon" id="htmlAnchor">
+                    <div class="line htmlLine"></div>
+                </div>
+                <div class="info">
+                    <h3>HTML Semester Project</h3>
+                    <a href="https://github.com/insertusernamed/semester-project"><img src="./img/html1.png"
+                            alt="HTML Semester Project" class="projectImage"></a>
+                </div>
+                <div class="info">
+                    <h3>Simon Says Game</h3>
+                    <a href="https://github.com/insertusernamed/lab-08"><img src="./img/html2.png"
+                            alt="Simon Says Game" class="projectImage"></a>
+                </div>
+            </div>
+            <div class="css project">
+                <div class="divider">
+                    <img src="./img/svg/css.svg" alt="CSS Icon" id="cssAnchor">
+                    <div class="line cssLine"></div>
+                </div>
+                <div class="info">
+                    <h3>Zen Garden Assignment</h3>
+                    <a href="https://github.com/insertusernamed/css-assignment-1"><img src="./img/css.png"
+                            alt="Zen Garden Assignment" class="projectImage"></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- The form doesn't actually work -->
+        <div class="contact">
+            <h3>Contact me!</h3>
+            <form action="#">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your name..." required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your email address..." required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Type your message here..." required></textarea>
+
+                <input type="submit" value="Send">
+            </form>
+        </div>
+    </div>
+
+    <!-- Small script to smooth scroll on icon clicks below bio -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('a[href^="#"]').on('click', function (event) {
+                var target = $(this.getAttribute('href'));
+                if (target.length) {
+                    event.preventDefault();
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
